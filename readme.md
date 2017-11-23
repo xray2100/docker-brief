@@ -8,15 +8,15 @@
 - 3.查看容器，*docker ps -a*
 
 ### 2. 添加管理员
-- 1.使用浏览器打开 http://127.0.0.1:8080/，可以看见首页，但是无法进入管理界面。
+- 1.使用浏览器打开 http://127.0.0.1:8080/, 可以看见首页，但是无法进入管理界面。
 - 2.进入容器内查看文件，*docker exec -it tomcat bash* 
-- 3.复制 tomcat-users.xml，*docker cp [tomcat-users.xml](http://pan.baidu.com/s/1o8Lwg6Q ) tomcat:/usr/local/tomcat/conf/*
-- 4.复制 manager.xml，*docker cp [manager.xml](http://pan.baidu.com/s/1o7PPHDC) tomcat:/usr/local/tomcat/conf/Catalina/localhost/*
+- 3.复制 tomcat-users.xml，*docker cp [tomcat-users.xml](https://github.com/xray2100/docker-brief/blob/master/tomcat-users.xml) tomcat:/usr/local/tomcat/conf/*
+- 4.复制 manager.xml，*docker cp [manager.xml](https://github.com/xray2100/docker-brief/blob/master/manager.xml) tomcat:/usr/local/tomcat/conf/Catalina/localhost/*
 
 ### 3. 重新运行容器
 - 1.停止容器，*docker stop tomcat*
 - 2.启动容器，*docker start tomcat*
-- 3.使用浏览器打开 http://127.0.0.1:8080/，部署WebApp。
+- 3.使用浏览器打开 http://127.0.0.1:8080/, 部署WebApp。
 
 ### 4. 移除
 - 1.删除容器，*docker rm tomcat*
@@ -31,7 +31,7 @@
 - 3.创建 auth 数据库
 
 ### 2. 部署 Spring Boot 应用
-- 1.下载 [auth.jar](http://pan.baidu.com/s/1mhXvrew) 和 [auth.dockerfile](http://pan.baidu.com/s/1qYDkAPA)
+- 1.下载 [auth.jar](https://github.com/xray2100/docker-brief/blob/master/auth.jar) 和 [auth.dockerfile](https://github.com/xray2100/docker-brief/blob/master/auth.dockerfile)
 - 2.生成镜像，*docker build -t auth:0.1 -f auth.dockerfile .* 
 - 3.查看镜像，*docker images*
 - 4.启动应用，*docker run --name auth -p 8080:8088 --link mysql:localhost -d auth:0.1* 
