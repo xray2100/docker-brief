@@ -16,7 +16,7 @@
 ### 3. 重新运行容器
 - 1.停止容器，*docker stop tomcat*
 - 2.启动容器，*docker start tomcat*
-- 3.使用浏览器打开 http://127.0.0.1:8080/，部署WebApp。
+- 3.使用浏览器打开 http://127.0.0.1:8080/, 部署WebApp。
 
 ### 4. 移除
 - 1.删除容器，*docker rm tomcat*
